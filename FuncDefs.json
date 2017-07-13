@@ -1,0 +1,13 @@
+{
+    "Functions" : [
+        {
+            "Id" : 0,
+            "Name" : "GetSQL",
+            "Type" : 2,
+            "ReturnType": 1,
+            "Params" : {
+                    "sql" : 0
+            }
+        }
+    ]
+}
