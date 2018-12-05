@@ -24,7 +24,6 @@ cursor = conn.cursor()
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
-
 class ExtensionService(SSE.ConnectorServicer):
     def __init__(self, funcdef_file):
         """
@@ -63,7 +62,8 @@ class ExtensionService(SSE.ConnectorServicer):
                 # Retrieve numerical value of parameter and append to the params variable
                 # Length of param is 1 since one column is received, the [0] collects the first value in the list
                 param = [d.strData for d in row.duals][0]
-
+                
+                # This is pretty costly.. remove it when you see SQL generating normally
                 print (param)
 
                 # Execute SQL command
