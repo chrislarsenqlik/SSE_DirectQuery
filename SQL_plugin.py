@@ -64,6 +64,8 @@ class ExtensionService(SSE.ConnectorServicer):
                 # Length of param is 1 since one column is received, the [0] collects the first value in the list
                 param = [d.strData for d in row.duals][0]
 
+                print (param)
+
                 # Execute SQL command
                 cursor.execute(param)
                 results = cursor.fetchall()
