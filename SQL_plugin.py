@@ -12,9 +12,15 @@ import grpc
 
 import ServerSideExtension_pb2 as SSE
 
-from impala.dbapi import connect as impalaconnect
-impalaconn = impalaconnect(host='ec2-34-227-63-43.compute-1.amazonaws.com', port=21050)
-impalacursor = impalaconn.cursor()
+import pyodbc
+pyodbc.autocommit = True
+
+conn = pyodbc.connect('DSN=Impala_ODBC', autocommit=True)
+cursor = conn.cursor()
+
+#from impala.dbapi import connect as impalaconnect
+#impalaconn = impalaconnect(host='10.142.0.7', port=21050)
+#impalacursor = impalaconn.cursor()
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
@@ -59,8 +65,8 @@ class ExtensionService(SSE.ConnectorServicer):
                 param = [d.strData for d in row.duals][0]
 
                 # Execute SQL command
-                impalacursor.execute(param)
-                results = impalacursor.fetchall()
+                cursor.execute(param)
+                results = cursor.fetchall()
                 results = results[0][0]
                 # Create an iterable of dual with numerical value
                 duals = iter([SSE.Dual(numData=results)])
