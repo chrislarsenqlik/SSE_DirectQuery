@@ -1,4 +1,5 @@
-# AAI_Impyla
+# SSE_DirectQuery
+
 Use AAI to query Impala via ODBC. Can easily be extended to query other ODBC sources.
 
 Default engine name is "PyODBC" and runs on port 50052, set it accordingly in settings.ini (desktop) / analytic connections (server)
