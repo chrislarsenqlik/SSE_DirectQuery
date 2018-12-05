@@ -5,7 +5,7 @@ Default engine name is "PyODBC" and runs on port 50052, set it accordingly in se
 
 If running on windows, use anaconda for python, not base python, had better results with thriftpy library. It probably works fine on windows with the right deps installed.
 
-Use python3.x, install packages "grpcio" & "impyla"
+Use python3.x, install packages "grpcio", "grpcio-tools" & "pyodbc"
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
