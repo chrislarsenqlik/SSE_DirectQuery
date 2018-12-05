@@ -15,6 +15,6 @@ To Run:
 3. Run "python SQL_Plugin.py".. if successful you will see output *** Running server in insecure mode on port: 50052 ***
 4. Start/Restart Qlik Sense Desktop or restart Qlik Sense Engine Service (if server) (the engine needs to be started with plugin running in background
 (if correctly registered will see "Adding to capabilities: GetSQL(['sql'])")
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 NOTE: 
 This is an early prototype to simply prove the concept simply, need to make the WHERE clause more dynamic by capturing the fields and related values selected.
