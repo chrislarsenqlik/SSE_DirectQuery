@@ -3,10 +3,19 @@
         {
             "Id" : 0,
             "Name" : "GetSQL",
-            "Type" : 2,
+            "Type" : 0,
             "ReturnType": 1,
             "Params" : {
                     "sql" : 0
+            }
+        },
+        {
+            "Id" : 1,
+            "Name" : "ConstructQuery",
+            "Type" : 0,
+            "ReturnType": 2,
+            "Params" : {
+                    "payload" : 0
             }
         }
     ]
